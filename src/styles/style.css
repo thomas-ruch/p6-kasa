@@ -1,0 +1,32 @@
+header {
+  display: flex;
+  justify-content: space-between;
+}
+header img {
+  height: 50px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+nav a {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
+  color: black;
+  margin: 0 20px;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+
+body {
+  margin: 0;
+  width: 100vw;
+  font-family: "Montserrat";
+}
+
+#root {
+  margin: 30px 60px;
+}/*# sourceMappingURL=style.css.map */
