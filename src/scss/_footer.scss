@@ -1,0 +1,14 @@
+@use "utils";
+
+footer {
+  @extend %flex-center;
+  flex-direction: column;
+  background-color: black;
+  color: utils.$txt-dark-bg;
+  padding: 30px 0;
+
+  img {
+    height: 40px;
+    margin-bottom: 30px;
+  }
+}

@@ -1,13 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./styles/style.css";
-import Router from "./components/Router";
-import Footer from "./components/Footer";
+import App from "./components/App";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Router />
-    <Footer />
+    <App />
   </React.StrictMode>
 );

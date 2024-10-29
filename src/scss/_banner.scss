@@ -1,0 +1,41 @@
+@use "utils";
+
+$banner-radius: 20px;
+
+.banner {
+  @extend %flex-center;
+  position: relative;
+  width: 100%;
+  height: 220px;
+  border-radius: $banner-radius;
+  box-shadow: 0 5px 5px gray;
+  margin-bottom: 50px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: $banner-radius;
+  }
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: $banner-radius;
+  }
+
+  h1 {
+    @extend %shadowed-text;
+    color: utils.$txt-dark-bg;
+    font-size: 48px;
+    z-index: 10;
+    position: absolute;
+  }
+}

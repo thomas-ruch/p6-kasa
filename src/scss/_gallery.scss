@@ -1,0 +1,16 @@
+@use "utils";
+
+.gallery {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  border-radius: 20px;
+  background-color: utils.$secondary-color;
+  padding: 0;
+  margin-bottom: 50px;
+
+  div {
+    margin: 20px 0;
+  }
+}

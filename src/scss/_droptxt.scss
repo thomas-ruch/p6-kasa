@@ -1,0 +1,45 @@
+@use "utils";
+
+.drop-box {
+  width: 80%;
+  border-radius: 5px;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.drop-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: utils.$main-color;
+  color: utils.$txt-dark-bg;
+  border-radius: 5px;
+  padding: 10px;
+  z-index: 100;
+
+  img {
+    &:is-open {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.drop-txt {
+  background-color: #fbfbfb;
+  margin-top: -5px;
+  margin-bottom: 10px;
+  padding: 20px;
+  font-size: 18px;
+  font-weight: 400;
+  border-radius: 0 0 5px 5px;
+  z-index: 0;
+}
+
+.is-open {
+  transition: max-height 0.5s ease;
+}
+
+.is-closed {
+  display: none;
+}

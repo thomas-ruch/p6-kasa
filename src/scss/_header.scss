@@ -1,6 +1,9 @@
+@use "utils";
+
 header {
   display: flex;
   justify-content: space-between;
+  padding: 30px 60px;
 
   img {
     height: 50px;
@@ -15,7 +18,7 @@ nav {
     text-decoration: none;
     font-size: 20px;
     font-weight: 500;
-    //color: vars.$txt-light-bg;
+    color: utils.$txt-light-bg;
     margin: 0 20px;
   }
 }

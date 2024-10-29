@@ -1,0 +1,13 @@
+@use "utils";
+
+.about-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-drop-txt {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
