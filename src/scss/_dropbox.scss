@@ -1,11 +1,7 @@
 @use "utils";
 
 .drop-box {
-  width: 80%;
-  border-radius: 5px;
-  font-size: 24px;
-  font-weight: 700;
-  margin-bottom: 20px;
+  width: 100%;
 }
 
 .drop-title {
@@ -14,32 +10,34 @@
   align-items: center;
   background-color: utils.$main-color;
   color: utils.$txt-dark-bg;
+  font-size: 24px;
+  font-weight: 700;
   border-radius: 5px;
   padding: 10px;
-  z-index: 100;
 
   img {
-    &:is-open {
-      transform: rotate(180deg);
-    }
+    transition: transform 0.3s ease;
   }
 }
 
 .drop-txt {
   background-color: #fbfbfb;
-  margin-top: -5px;
-  margin-bottom: 10px;
-  padding: 20px;
   font-size: 18px;
   font-weight: 400;
   border-radius: 0 0 5px 5px;
-  z-index: 0;
+  padding: 20px;
+  max-height: 0;
+  transition: max-height 0.4s ease;
 }
 
 .is-open {
-  transition: max-height 0.5s ease;
+  max-height: 500px;
 }
 
 .is-closed {
   display: none;
+}
+
+.rotated {
+  transform: rotate(-180deg);
 }

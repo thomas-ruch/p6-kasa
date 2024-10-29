@@ -12,21 +12,29 @@ footer, .error, .banner {
   width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
-.about-drop-txt {
+.about-banner {
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.about-drop-boxes {
   display: flex;
-  align-items: center;
   flex-direction: column;
+  width: 80%;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 50px;
 }
 
 .banner {
-  position: relative;
   width: 100%;
   height: 220px;
+  position: relative;
   border-radius: 20px;
   box-shadow: 0 5px 5px gray;
-  margin-bottom: 50px;
 }
 .banner::after {
   content: "";
@@ -36,7 +44,7 @@ footer, .error, .banner {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.4);
   border-radius: 20px;
 }
 .banner img {
@@ -92,11 +100,7 @@ main {
 }
 
 .drop-box {
-  width: 80%;
-  border-radius: 5px;
-  font-size: 24px;
-  font-weight: 700;
-  margin-bottom: 20px;
+  width: 100%;
 }
 
 .drop-title {
@@ -105,31 +109,35 @@ main {
   align-items: center;
   background-color: #f46062;
   color: white;
+  font-size: 24px;
+  font-weight: 700;
   border-radius: 5px;
   padding: 10px;
-  z-index: 100;
 }
-.drop-title img:is-open {
-  transform: rotate(180deg);
+.drop-title img {
+  transition: transform 0.3s ease;
 }
 
 .drop-txt {
   background-color: #fbfbfb;
-  margin-top: -5px;
-  margin-bottom: 10px;
-  padding: 20px;
   font-size: 18px;
   font-weight: 400;
   border-radius: 0 0 5px 5px;
-  z-index: 0;
+  padding: 20px;
+  max-height: 0;
+  transition: max-height 0.4s ease;
 }
 
 .is-open {
-  transition: 0.5s ease;
+  max-height: 500px;
 }
 
 .is-closed {
   display: none;
+}
+
+.rotated {
+  transform: rotate(-180deg);
 }
 
 .error {
@@ -173,7 +181,6 @@ footer img {
   border-radius: 20px;
   background-color: #f6f6f6;
   padding: 0;
-  margin-bottom: 50px;
 }
 .gallery div {
   margin: 20px 0;
@@ -202,4 +209,12 @@ nav a {
 
 .active-link {
   text-decoration: underline;
+}
+
+.home-banner {
+  margin-bottom: 50px;
+}
+
+.home-gallery {
+  margin-bottom: 50px;
 }/*# sourceMappingURL=style.css.map */

@@ -4,12 +4,11 @@ $banner-radius: 20px;
 
 .banner {
   @extend %flex-center;
-  position: relative;
   width: 100%;
   height: 220px;
+  position: relative;
   border-radius: $banner-radius;
   box-shadow: 0 5px 5px gray;
-  margin-bottom: 50px;
 
   &::after {
     content: "";
@@ -19,7 +18,7 @@ $banner-radius: 20px;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.4);
     border-radius: $banner-radius;
   }
 

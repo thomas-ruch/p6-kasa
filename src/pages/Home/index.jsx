@@ -4,13 +4,17 @@ import bg from "../../assets/img-sea.png";
 
 function Home() {
   return (
-    <section>
-      <Banner>
-        <img src={bg} alt="paysage de mer et montagne" />
-        <h1>Chez vous, partout et ailleurs</h1>
-      </Banner>
-      <Gallery />
-    </section>
+    <div>
+      <section className="home-banner">
+        <Banner>
+          <img src={bg} alt="paysage de mer et montagne" />
+          <h1>Chez vous, partout et ailleurs</h1>
+        </Banner>
+      </section>
+      <section>
+        <Gallery />
+      </section>
+    </div>
   );
 }
 
