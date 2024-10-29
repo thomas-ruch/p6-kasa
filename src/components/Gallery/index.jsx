@@ -6,7 +6,7 @@ function Gallery() {
     <ul className="gallery">
       {accomodations.map(({ id, title, cover }) => (
         <div key={id}>
-          <Card title={title} cover={cover} />
+          <Card id={id} title={title} cover={cover} />
         </div>
       ))}
     </ul>

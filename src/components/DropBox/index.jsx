@@ -11,7 +11,7 @@ function DropBox({ title, content }) {
         <img
           src={arrow}
           alt="flèche"
-          className={isOpen && "rotated"}
+          className={isOpen ? "rotated" : ""}
           onClick={() => setIsOpen(!isOpen)}
         />
       </div>

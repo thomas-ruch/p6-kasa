@@ -1,13 +1,20 @@
-import { useParams } from 'react-router-dom'
+import { useParams } from "react-router-dom";
+import accomodations from "../../datas/accomodations.json";
+import Slideshow from "../../components/Slideshow";
 
 function Accomodation() {
-    const { accNumber } = useParams()
+  const { accId } = useParams();
 
-    return (
-        <div>
-        <h1>Logement {accNumber}</h1>
-        </div>
-    )
+  const currentAcc = accomodations.find((elem) => elem.id === accId);
+
+  return (
+    <div>
+      <h1>Logement {accId}</h1>
+      <section className="accomodations-slideshow">
+        <Slideshow pictures={currentAcc.pictures} />
+      </section>
+    </div>
+  );
 }
 
-export default Accomodation
+export default Accomodation;

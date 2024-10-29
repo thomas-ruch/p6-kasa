@@ -9,6 +9,7 @@ $banner-radius: 20px;
   position: relative;
   border-radius: $banner-radius;
   box-shadow: 0 5px 5px gray;
+  cursor: default;
 
   &::after {
     content: "";
