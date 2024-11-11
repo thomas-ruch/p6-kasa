@@ -1,0 +1,64 @@
+@use "../../scss/utils";
+
+.accomodation-slideshow {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.accomodation-infos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.accomodation-title {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+
+  h2 {
+    color: utils.$main-color;
+    font-size: 36px;
+    font-weight: 500;
+    margin: 0 0 5px 0;
+
+    + span {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+  }
+
+  div {
+    display: flex;
+    gap: 10px;
+  }
+}
+
+.accomodation-rating {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: utils.$main-color;
+
+  img {
+    width: 64px;
+    border-radius: 50%;
+  }
+}
+
+.accomodation-host {
+  display: flex;
+  text-align: right;
+  align-items: center;
+  max-width: 180px;
+  gap: 15px;
+}
+
+.accomodation-description {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  margin-bottom: 50px;
+}

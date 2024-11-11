@@ -1,4 +1,4 @@
-@use "utils";
+@use "../../scss/utils";
 
 .card {
   height: 340px;
@@ -6,6 +6,8 @@
   display: flex;
   flex-direction: column;
   position: relative;
+  margin: 20px 0;
+  cursor: pointer;
 
   img {
     width: 100%;

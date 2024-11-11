@@ -1,4 +1,4 @@
-@use "utils";
+@use "../../scss/utils";
 
 .slideshow {
   width: 100%;
@@ -16,16 +16,16 @@
     position: absolute;
     object-fit: contain;
     opacity: 0.9;
+    top: 40%;
+    color: utils.$txt-dark-bg;
+    cursor: pointer;
   }
 
   .prev {
-    top: 0;
     left: 20px;
-    transform: rotate(180deg);
   }
 
   .next {
-    top: 0;
     right: 20px;
   }
 

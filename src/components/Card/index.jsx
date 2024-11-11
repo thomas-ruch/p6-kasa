@@ -1,16 +1,12 @@
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Card({ title, cover, id }) {
-  const navigate = useNavigate();
-
   return (
     <li className="card">
-      <img
-        src={cover}
-        alt={`${title} cover`}
-        onClick={() => navigate(`accomodation/${id}`)}
-      />
-      <span>{title}</span>
+      <Link to={`/accomodation/${id}`}>
+        <img src={cover} alt={`${title} cover`} />
+        <span>{title}</span>
+      </Link>
     </li>
   );
 }

@@ -1,5 +1,7 @@
 import { useState } from "react";
-import arrow from "../../assets/arrow_slide.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
+import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 
 function Slideshow({ pictures }) {
   const [index, setIndex] = useState(0);
@@ -20,17 +22,17 @@ function Slideshow({ pictures }) {
   return (
     <div className="slideshow">
       <img src={pictures[index]} alt="" />
-      <img
-        src={arrow}
-        alt="flèche précédente"
+      <FontAwesomeIcon
+        icon={faAngleLeft}
+        size="4x"
         className="sld-arrow prev"
-        onClick={() => prevImage()}
+        onClick={prevImage}
       />
-      <img
-        src={arrow}
-        alt="flèche suivante"
+      <FontAwesomeIcon
+        icon={faAngleRight}
+        size="4x"
         className="sld-arrow next"
-        onClick={() => nextImage()}
+        onClick={nextImage}
       />
       <span>{`${index + 1}/${pictLength}`}</span>
     </div>

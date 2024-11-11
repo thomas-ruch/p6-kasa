@@ -1,5 +1,5 @@
 import Banner from "../../components/Banner";
-import bg from "../../assets/img-mountain.png";
+import bg from "../../assets/img-mountain.webp";
 import DropBox from "../../components/DropBox";
 import aboutList from "../../datas/aboutList.json";
 

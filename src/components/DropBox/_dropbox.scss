@@ -1,4 +1,4 @@
-@use "utils";
+@use "../../scss/utils";
 
 .drop-box {
   width: 100%;
@@ -14,11 +14,6 @@
   font-weight: 700;
   border-radius: 5px;
   padding: 10px;
-
-  img {
-    transition: transform 0.3s ease;
-    cursor: pointer;
-  }
 }
 
 .drop-txt {
@@ -29,6 +24,12 @@
   padding: 20px;
   max-height: 0;
   transition: max-height 0.4s ease;
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
 }
 
 .is-open {
@@ -39,6 +40,7 @@
   display: none;
 }
 
-.rotated {
-  transform: rotate(-180deg);
+.fa-spin {
+  --fa-animation-duration: 0.3s;
+  --fa-animation-iteration-count: 0.5;
 }

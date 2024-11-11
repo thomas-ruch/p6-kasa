@@ -1,6 +1,6 @@
 import Banner from "../../components/Banner";
 import Gallery from "../../components/Gallery";
-import bg from "../../assets/img-sea.png";
+import bg from "../../assets/img-sea.webp";
 
 function Home() {
   return (

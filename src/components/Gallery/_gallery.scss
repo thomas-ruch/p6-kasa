@@ -1,4 +1,4 @@
-@use "utils";
+@use "../../scss/utils";
 
 .gallery {
   list-style-type: none;
@@ -8,9 +8,4 @@
   border-radius: 20px;
   background-color: utils.$secondary-color;
   padding: 0;
-
-  div {
-    margin: 20px 0;
-    cursor: pointer;
-  }
 }
