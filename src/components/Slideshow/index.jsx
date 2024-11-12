@@ -1,11 +1,18 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 
 function Slideshow({ pictures }) {
   const [index, setIndex] = useState(0);
+  const [isVisible, setIsVisible] = useState(true);
   const [pictLength] = useState(pictures.length);
+
+  useEffect(() => {
+    if (pictLength === 1) {
+      setIsVisible(false);
+    }
+  }, [pictLength]);
 
   function prevImage() {
     return index <= pictLength - 1 && index > 0
@@ -25,16 +32,22 @@ function Slideshow({ pictures }) {
       <FontAwesomeIcon
         icon={faAngleLeft}
         size="4x"
-        className="sld-arrow prev"
+        className={`sld-arrow prev ${
+          isVisible ? "is-visible" : "is-invisible"
+        }`}
         onClick={prevImage}
       />
       <FontAwesomeIcon
         icon={faAngleRight}
         size="4x"
-        className="sld-arrow next"
+        className={`sld-arrow next ${
+          isVisible ? "is-visible" : "is-invisible"
+        }`}
         onClick={nextImage}
       />
-      <span>{`${index + 1}/${pictLength}`}</span>
+      <span className={`${isVisible ? "is-visible" : "is-invisible"}`}>{`${
+        index + 1
+      }/${pictLength}`}</span>
     </div>
   );
 }

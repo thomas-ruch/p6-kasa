@@ -64,6 +64,7 @@ footer, .error, .banner {
 }
 .accomodation-title div {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
 }
 
@@ -248,7 +249,7 @@ footer img {
   justify-content: space-around;
   border-radius: 20px;
   background-color: #f6f6f6;
-  padding: 0;
+  padding: 20px;
 }
 
 header {
@@ -322,6 +323,14 @@ nav a {
   position: absolute;
   bottom: 20px;
   right: 50%;
+}
+
+.is-visible {
+  display: unset;
+}
+
+.is-invisible {
+  display: none;
 }
 
 .tag {
