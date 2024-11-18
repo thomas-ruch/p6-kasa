@@ -1,8 +1,8 @@
 @use "../../scss/utils";
 
 .card {
-  height: 340px;
-  width: 340px;
+  height: 320px;
+  width: 320px;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -29,5 +29,11 @@
     position: absolute;
     bottom: 15px;
     left: 15px;
+  }
+}
+
+@media (max-width: utils.$small-screen-width) {
+  .card {
+    width: 100%;
   }
 }

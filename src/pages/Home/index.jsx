@@ -11,7 +11,7 @@ function Home() {
           <h1>Chez vous, partout et ailleurs</h1>
         </Banner>
       </section>
-      <section>
+      <section className="home-gallery">
         <Gallery />
       </section>
     </div>

@@ -6,6 +6,8 @@
 }
 
 .home-gallery {
+  display: flex;
+  justify-content: center;
   margin-bottom: 50px;
 }
 
@@ -13,5 +15,9 @@
   .home-banner {
     height: 110px;
     font-size: 24px;
+  }
+
+  .home-gallery {
+    margin-bottom: 0;
   }
 }

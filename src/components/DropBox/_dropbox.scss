@@ -10,7 +10,7 @@
   align-items: center;
   background-color: utils.$main-color;
   color: utils.$txt-dark-bg;
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 700;
   border-radius: 5px;
   padding: 10px;
@@ -43,4 +43,14 @@
 .fa-spin {
   --fa-animation-duration: 0.3s;
   --fa-animation-iteration-count: 0.5;
+}
+
+@media (max-width: utils.$small-screen-width) {
+  .drop-title {
+    font-size: 16px;
+  }
+
+  .drop-txt {
+    font-size: 14px;
+  }
 }

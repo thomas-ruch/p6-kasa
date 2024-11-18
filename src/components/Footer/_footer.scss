@@ -2,6 +2,7 @@
 
 footer {
   @extend %flex-center;
+  width: 100vw;
   flex-direction: column;
   background-color: black;
   color: utils.$txt-dark-bg;
@@ -13,5 +14,20 @@ footer {
   }
 }
 
+.footer-legal-notice {
+  display: flex;
+  gap: 5px;
+}
+
+@media (min-width: utils.$desktop-max-width) {
+  footer {
+    translate: calc(-1 * (100vw - utils.$desktop-max-width) / 2);
+  }
+}
+
 @media (max-width: utils.$small-screen-width) {
+  .footer-legal-notice {
+    flex-direction: column;
+    align-items: center;
+  }
 }

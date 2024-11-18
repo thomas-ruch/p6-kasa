@@ -9,3 +9,13 @@
   background-color: utils.$secondary-color;
   padding: 20px;
 }
+
+@media (max-width: utils.$small-screen-width) {
+  .gallery {
+    width: 100%;
+    flex-direction: column;
+    border-radius: 0;
+    background-color: unset;
+    padding: 0;
+  }
+}

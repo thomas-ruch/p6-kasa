@@ -37,11 +37,12 @@ $banner-radius: 20px;
     font-size: 48px;
     z-index: 10;
     position: absolute;
+    padding: 30px;
   }
 }
 
 @media (max-width: utils.$small-screen-width) {
   .banner h1 {
-    font-size: 34px;
+    font-size: 28px;
   }
 }

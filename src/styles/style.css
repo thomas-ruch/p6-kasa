@@ -137,22 +137,24 @@ footer, .error, .banner {
   font-size: 48px;
   z-index: 10;
   position: absolute;
+  padding: 30px;
 }
 
 @media (max-width: 850px) {
   .banner h1 {
-    font-size: 34px;
+    font-size: 28px;
   }
 }
 body {
-  margin: 0;
-  width: 100vw;
+  max-width: 1500px;
+  margin: auto;
   font-family: "Montserrat";
   font-size: 18px;
 }
 
+header,
 main {
-  margin: 0 60px;
+  margin: 0 50px;
 }
 
 @media (max-width: 850px) {
@@ -161,8 +163,8 @@ main {
   }
 }
 .card {
-  height: 340px;
-  width: 340px;
+  height: 320px;
+  width: 320px;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -188,6 +190,11 @@ main {
   left: 15px;
 }
 
+@media (max-width: 850px) {
+  .card {
+    width: 100%;
+  }
+}
 .drop-box {
   width: 100%;
 }
@@ -198,7 +205,7 @@ main {
   align-items: center;
   background-color: #f46062;
   color: white;
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 700;
   border-radius: 5px;
   padding: 10px;
@@ -232,6 +239,14 @@ main {
   --fa-animation-iteration-count: 0.5;
 }
 
+@media (max-width: 850px) {
+  .drop-title {
+    font-size: 16px;
+  }
+  .drop-txt {
+    font-size: 14px;
+  }
+}
 .error {
   flex-direction: column;
   color: #f46062;
@@ -254,6 +269,7 @@ main {
 }
 
 footer {
+  width: 100vw;
   flex-direction: column;
   background-color: black;
   color: white;
@@ -263,10 +279,23 @@ footer img {
   height: 40px;
   margin-bottom: 30px;
 }
-footer span {
-  flex-wrap: wrap;
+
+.footer-legal-notice {
+  display: flex;
+  gap: 5px;
 }
 
+@media (min-width: 1500px) {
+  footer {
+    translate: calc(-1 * (100vw - 1500px) / 2);
+  }
+}
+@media (max-width: 850px) {
+  .footer-legal-notice {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .gallery {
   list-style-type: none;
   display: flex;
@@ -277,37 +306,57 @@ footer span {
   padding: 20px;
 }
 
+@media (max-width: 850px) {
+  .gallery {
+    width: 100%;
+    flex-direction: column;
+    border-radius: 0;
+    background-color: unset;
+    padding: 0;
+  }
+}
 header {
   display: flex;
   justify-content: space-between;
-  padding: 30px 60px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 header img {
   height: 50px;
 }
-
-nav {
+header nav {
   display: flex;
+  justify-content: space-between;
   align-items: center;
+  width: 200px;
 }
-nav a {
+header nav a {
   text-decoration: none;
   font-size: 20px;
   font-weight: 500;
   color: black;
-  margin: 0 20px;
 }
 
 .active-link {
   text-decoration: underline;
 }
 
+@media (max-width: 850px) {
+  header nav {
+    justify-content: space-around;
+  }
+  header nav a {
+    font-size: 16px;
+  }
+}
 .home-banner {
   height: 220px;
   margin-bottom: 50px;
 }
 
 .home-gallery {
+  display: flex;
+  justify-content: center;
   margin-bottom: 50px;
 }
 
@@ -315,6 +364,9 @@ nav a {
   .home-banner {
     height: 110px;
     font-size: 24px;
+  }
+  .home-gallery {
+    margin-bottom: 0;
   }
 }
 .rating {

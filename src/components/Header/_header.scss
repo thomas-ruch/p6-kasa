@@ -3,26 +3,39 @@
 header {
   display: flex;
   justify-content: space-between;
-  padding: 30px 60px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 
   img {
     height: 50px;
   }
-}
 
-nav {
-  display: flex;
-  align-items: center;
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px;
 
-  a {
-    text-decoration: none;
-    font-size: 20px;
-    font-weight: 500;
-    color: utils.$txt-light-bg;
-    margin: 0 20px;
+    a {
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: 500;
+      color: utils.$txt-light-bg;
+    }
   }
 }
 
 .active-link {
   text-decoration: underline;
+}
+
+@media (max-width: utils.$small-screen-width) {
+  header {
+    nav {
+      justify-content: space-around;
+      a {
+        font-size: 16px;
+      }
+    }
+  }
 }
