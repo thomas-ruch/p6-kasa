@@ -63,3 +63,31 @@
   gap: 50px;
   margin-bottom: 50px;
 }
+
+@media (max-width: utils.$small-screen-width) {
+  .accomodation-slideshow {
+    margin-bottom: 10px;
+  }
+
+  .accomodation-infos {
+    flex-direction: column;
+  }
+
+  .accomodation-title {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .accomodation-rating {
+    flex-direction: row-reverse;
+
+    .rating {
+      justify-content: flex-start;
+    }
+  }
+
+  .accomodation-description {
+    flex-direction: column;
+    gap: 30px;
+  }
+}

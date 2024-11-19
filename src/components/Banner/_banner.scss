@@ -42,7 +42,11 @@ $banner-radius: 20px;
 }
 
 @media (max-width: utils.$small-screen-width) {
-  .banner h1 {
-    font-size: 28px;
+  .banner {
+    justify-content: unset;
+
+    h1 {
+      font-size: 28px;
+    }
   }
 }

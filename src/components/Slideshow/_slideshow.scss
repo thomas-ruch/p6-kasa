@@ -45,3 +45,6 @@
 .is-invisible {
   display: none;
 }
+
+@media (max-width: utils.$small-screen-width) {
+}

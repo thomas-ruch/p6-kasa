@@ -7,7 +7,7 @@ header {
   margin-bottom: 30px;
 
   img {
-    height: 50px;
+    height: 60px;
   }
 
   nav {
@@ -31,10 +31,15 @@ header {
 
 @media (max-width: utils.$small-screen-width) {
   header {
+    img {
+      height: 50px;
+    }
+
     nav {
-      justify-content: space-around;
+      width: 180px;
+
       a {
-        font-size: 16px;
+        font-size: 18px;
       }
     }
   }

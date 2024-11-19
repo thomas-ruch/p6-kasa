@@ -12,8 +12,17 @@ main {
   margin: 0 50px;
 }
 
+.conditionnal-break {
+  display: none;
+}
+
 @media (max-width: utils.$small-screen-width) {
+  header,
   main {
     margin: 0 30px;
+  }
+
+  .conditionnal-break {
+    display: unset;
   }
 }

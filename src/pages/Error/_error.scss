@@ -24,3 +24,19 @@
     color: utils.$txt-light-bg;
   }
 }
+
+@media (max-width: utils.$small-screen-width) {
+  .error {
+    span {
+      font-size: 120px;
+    }
+
+    p {
+      font-size: 24px;
+    }
+
+    a {
+      margin-bottom: 160px;
+    }
+  }
+}
