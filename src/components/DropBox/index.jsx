@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import arrow from "../../assets/arrow_back.png";
 
 function DropBox({ title, content }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,10 +8,11 @@ function DropBox({ title, content }) {
     <div className="drop-box">
       <div className="drop-title">
         <span>{title}</span>
-        <FontAwesomeIcon
-          icon={faChevronUp}
+        <img
+          src={arrow}
+          alt="flèche"
+          className={isOpen && "rotated"}
           onClick={() => setIsOpen(!isOpen)}
-          className={isOpen ? "fa-spin" : ""}
         />
       </div>
       <div className={`drop-txt ${isOpen ? "is-open" : "is-closed"}`}>

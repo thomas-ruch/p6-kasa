@@ -1,7 +1,5 @@
 import { useState, useEffect } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
-import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
+import arrow from "../../assets/arrow_slide.png";
 
 function Slideshow({ pictures }) {
   const [index, setIndex] = useState(0);
@@ -29,21 +27,17 @@ function Slideshow({ pictures }) {
   return (
     <div className="slideshow">
       <img src={pictures[index]} alt="" />
-      <FontAwesomeIcon
-        icon={faAngleLeft}
-        size="4x"
-        className={`sld-arrow prev ${
-          isVisible ? "is-visible" : "is-invisible"
-        }`}
-        onClick={prevImage}
+      <img
+        src={arrow}
+        alt="flèche précédente"
+        className="sld-arrow prev"
+        onClick={() => prevImage()}
       />
-      <FontAwesomeIcon
-        icon={faAngleRight}
-        size="4x"
-        className={`sld-arrow next ${
-          isVisible ? "is-visible" : "is-invisible"
-        }`}
-        onClick={nextImage}
+      <img
+        src={arrow}
+        alt="flèche suivante"
+        className="sld-arrow next"
+        onClick={() => nextImage()}
       />
       <span className={`${isVisible ? "is-visible" : "is-invisible"}`}>{`${
         index + 1

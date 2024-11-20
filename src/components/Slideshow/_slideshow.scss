@@ -6,7 +6,7 @@
 
   img {
     width: 100%;
-    height: 400px;
+    height: 430px;
     object-fit: cover;
     border-radius: 20px;
   }
@@ -16,17 +16,17 @@
     position: absolute;
     object-fit: contain;
     opacity: 0.9;
-    top: 40%;
-    color: utils.$txt-dark-bg;
-    cursor: pointer;
   }
 
   .prev {
-    left: 20px;
+    top: 0;
+    left: 3%;
+    transform: rotate(180deg);
   }
 
   .next {
-    right: 20px;
+    top: 0;
+    right: 3%;
   }
 
   span {
@@ -47,4 +47,18 @@
 }
 
 @media (max-width: utils.$small-screen-width) {
+  .slideshow {
+    img {
+      height: 250px;
+      border-radius: 15px;
+    }
+
+    .sld-arrow {
+      width: 16px;
+    }
+
+    span {
+      display: none;
+    }
+  }
 }

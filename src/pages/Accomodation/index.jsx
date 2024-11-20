@@ -1,9 +1,9 @@
 import { useParams, Navigate } from "react-router-dom";
-import { useState } from "react";
 import accomodations from "../../datas/accomodations.json";
 import Slideshow from "../../components/Slideshow";
 import DropBox from "../../components/DropBox";
 import Rating from "../../components/Rating";
+import Host from "../../components/Host";
 import Tag from "../../components/Tag";
 
 function Accomodation() {
@@ -30,13 +30,10 @@ function Accomodation() {
               </div>
             </div>
             <div className="accomodation-rating">
-              <div className="accomodation-host">
-                <span>{currentAcc.host.name}</span>
-                <img
-                  src={currentAcc.host.picture}
-                  alt="icone du propriétaire"
-                />
-              </div>
+              <Host
+                picture={currentAcc.host.picture}
+                name={currentAcc.host.name}
+              />
               <Rating rate={currentAcc.rating} />
             </div>
           </div>

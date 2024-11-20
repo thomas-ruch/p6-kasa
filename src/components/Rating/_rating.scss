@@ -1,7 +1,23 @@
+@use "../../scss/utils";
+
 .rating {
   display: flex;
   justify-content: flex-end;
   width: 100%;
-  gap: 5px;
-  margin: 15px 15px;
+  margin-top: 15px;
+
+  img {
+    width: 30px;
+  }
+}
+
+@media (max-width: utils.$small-screen-width) {
+  .rating {
+    justify-content: flex-start;
+    margin-top: 0;
+
+    img {
+      width: 25px;
+    }
+  }
 }

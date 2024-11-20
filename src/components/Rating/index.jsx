@@ -1,6 +1,5 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faStar as fasStar } from "@fortawesome/free-solid-svg-icons";
-import { faStar as farStar } from "@fortawesome/free-regular-svg-icons";
+import activeStar from "../../assets/star-active.png";
+import inactiveStar from "../../assets/star-inactive.png";
 
 function Rating({ rate }) {
   const range = [1, 2, 3, 4, 5];
@@ -9,9 +8,9 @@ function Rating({ rate }) {
     <div className="rating">
       {range.map((elem) =>
         elem <= Number(rate) ? (
-          <FontAwesomeIcon key={elem.toString()} icon={fasStar} />
+          <img key={elem.toString()} src={activeStar} alt="Etoile pleine" />
         ) : (
-          <FontAwesomeIcon key={elem.toString()} icon={farStar} />
+          <img key={elem.toString()} src={inactiveStar} alt="Etoile vide" />
         )
       )}
     </div>

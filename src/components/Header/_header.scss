@@ -14,7 +14,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 200px;
+    gap: 50px;
 
     a {
       text-decoration: none;
@@ -32,14 +32,15 @@ header {
 @media (max-width: utils.$small-screen-width) {
   header {
     img {
-      height: 50px;
+      height: 40px;
     }
 
     nav {
-      width: 180px;
+      gap: 20px;
 
       a {
-        font-size: 18px;
+        font-size: 14px;
+        text-transform: uppercase;
       }
     }
   }
