@@ -9,6 +9,7 @@
   background-color: utils.$main-color;
   padding: 3px 40px;
   border-radius: 10px;
+  cursor: default;
 }
 
 @media (max-width: utils.$small-screen-width) {

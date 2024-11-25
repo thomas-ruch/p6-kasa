@@ -4,24 +4,27 @@
   @extend %flex-center;
   flex-direction: column;
   color: utils.$main-color;
+  cursor: default;
 
   span {
-    margin-top: 80px;
+    margin-top: 60px;
     color: utils.$main-color;
-    font-size: 288px;
+    font-size: 260px;
     font-weight: 700;
   }
 
   p {
-    margin-top: 100px;
-    font-size: 36px;
+    margin-top: 80px;
+    font-size: 32px;
     font-weight: 500;
   }
 
   a {
-    margin-top: 120px;
-    margin-bottom: 50px;
+    margin-top: 80px;
+    margin-bottom: 120px;
     color: utils.$txt-light-bg;
+    font-size: 16px;
+    font-weight: 600;
   }
 }
 

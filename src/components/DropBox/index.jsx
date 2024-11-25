@@ -11,20 +11,22 @@ function DropBox({ title, content }) {
         <img
           src={arrow}
           alt="flèche"
-          className={isOpen && "rotated"}
+          className={isOpen ? "rotated" : ""}
           onClick={() => setIsOpen(!isOpen)}
         />
       </div>
-      <div className={`drop-txt ${isOpen ? "is-open" : "is-closed"}`}>
-        {Array.isArray(content) ? (
-          <ul>
-            {content.map((elem, index) => (
-              <li key={index}>{elem}</li>
-            ))}
-          </ul>
-        ) : (
-          <span>{content}</span>
-        )}
+      <div className={`drop-txt ${isOpen ? "is-open" : ""}`}>
+        <div className="drop-txt-content">
+          {Array.isArray(content) ? (
+            <ul>
+              {content.map((elem, index) => (
+                <li key={index}>{elem}</li>
+              ))}
+            </ul>
+          ) : (
+            <span>{content}</span>
+          )}
+        </div>
       </div>
     </div>
   );

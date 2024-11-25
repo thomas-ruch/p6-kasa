@@ -22,8 +22,10 @@
   }
 
   span {
+    width: 50%;
     @extend %shadowed-text;
-    @extend %standard-font;
+    font-size: 16px;
+    font-weight: 500;
     color: utils.$txt-dark-bg;
     z-index: 100;
     position: absolute;

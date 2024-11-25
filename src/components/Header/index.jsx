@@ -4,7 +4,9 @@ import logo from "../../assets/logo.png";
 function Header() {
   return (
     <header>
-      <img src={logo} alt="logo Kasa" />
+      <NavLink to="/">
+        <img src={logo} alt="logo Kasa" />
+      </NavLink>
       <nav>
         <NavLink
           to="/"

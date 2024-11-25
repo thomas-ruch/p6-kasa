@@ -10,38 +10,47 @@
   align-items: center;
   background-color: utils.$main-color;
   color: utils.$txt-dark-bg;
-  font-size: 22px;
-  font-weight: 700;
+  font-size: 20px;
+  font-weight: 600;
   border-radius: 5px;
   padding: 10px;
+  cursor: default;
 
   img {
     transition: transform 0.3s ease;
+    cursor: pointer;
   }
 }
 
 .drop-txt {
-  background-color: #fbfbfb;
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.4s ease-in-out;
   font-size: 18px;
   font-weight: 400;
-  border-radius: 0 0 5px 5px;
-  padding: 20px;
-  max-height: 0;
-  transition: max-height 0.4s ease;
+
+  .drop-txt-content {
+    background-color: #fbfbfb;
+    border-radius: 0 0 5px 5px;
+    margin-top: -5px;
+    z-index: -10;
+    overflow: hidden;
+
+    span {
+      display: block;
+      padding: 20px;
+    }
+  }
 
   ul {
     list-style-type: none;
-    padding: 0;
+    padding: 20px;
     margin: 0;
   }
 }
 
 .is-open {
-  max-height: 500px;
-}
-
-.is-closed {
-  display: none;
+  grid-template-rows: 1fr;
 }
 
 .rotated {
