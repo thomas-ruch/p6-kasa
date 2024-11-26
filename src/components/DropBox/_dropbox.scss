@@ -60,6 +60,10 @@
 @media (max-width: utils.$small-screen-width) {
   .drop-title {
     font-size: 16px;
+
+    img {
+      height: 13px;
+    }
   }
 
   .drop-txt {

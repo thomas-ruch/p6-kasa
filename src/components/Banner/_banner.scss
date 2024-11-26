@@ -1,6 +1,8 @@
 @use "../../scss/utils";
 
+// Variables pour gestion des arrondis de bannière
 $banner-radius: 20px;
+$small-banner-radius: 15px;
 
 .banner {
   @extend %flex-center;
@@ -44,6 +46,16 @@ $banner-radius: 20px;
 @media (max-width: utils.$small-screen-width) {
   .banner {
     justify-content: unset;
+    border-radius: $small-banner-radius;
+    box-shadow: unset;
+
+    &::after {
+      border-radius: $small-banner-radius;
+    }
+
+    img {
+      border-radius: $small-banner-radius;
+    }
 
     h1 {
       font-size: 24px;

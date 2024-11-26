@@ -30,13 +30,17 @@ function Slideshow({ pictures }) {
       <img
         src={arrow}
         alt="flèche précédente"
-        className="sld-arrow prev"
+        className={`sld-arrow prev ${
+          isVisible ? "is-visible" : "is-invisible"
+        }`}
         onClick={() => prevImage()}
       />
       <img
         src={arrow}
         alt="flèche suivante"
-        className="sld-arrow next"
+        className={`sld-arrow next ${
+          isVisible ? "is-visible" : "is-invisible"
+        }`}
         onClick={() => nextImage()}
       />
       <span className={`${isVisible ? "is-visible" : "is-invisible"}`}>{`${

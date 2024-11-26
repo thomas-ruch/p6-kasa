@@ -6,8 +6,7 @@
 }
 
 .home-gallery {
-  display: flex;
-  justify-content: center;
+  @extend %flex-center;
   margin-bottom: 50px;
 }
 
@@ -20,5 +19,12 @@
 
   .home-gallery {
     margin-bottom: 0;
+  }
+}
+
+@media (max-width: utils.$small-screen-width) {
+  .home-banner {
+    margin-top: 20px;
+    margin-bottom: 10px;
   }
 }

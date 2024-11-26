@@ -14,7 +14,8 @@
 
 @media (max-width: utils.$small-screen-width) {
   .tag {
-    font-size: 10px;
+    font-size: 12px;
     padding: 3px 30px;
+    border-radius: 5px;
   }
 }
