@@ -4,6 +4,15 @@ html {
   height: 100%;
 }
 
+body {
+  height: 100%;
+  max-width: utils.$desktop-max-width;
+  margin: auto;
+  font-family: "Montserrat";
+  font-size: 18px;
+  overflow-x: hidden;
+}
+
 #root {
   height: 100%;
 }
@@ -14,16 +23,13 @@ html {
   flex-direction: column;
 }
 
-body {
-  height: 100%;
-  max-width: utils.$desktop-max-width;
-  margin: auto;
-  font-family: "Montserrat";
-  font-size: 18px;
-}
-
 main {
   flex-grow: 1;
+}
+
+header,
+main {
+  margin: 0 50px;
 }
 
 .conditionnal-break {
@@ -31,6 +37,10 @@ main {
 }
 
 @media (max-width: utils.$small-screen-width) {
+  body {
+    overflow-x: hidden;
+  }
+
   header,
   main {
     margin: 0 30px;
